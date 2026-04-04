@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Gerbil';
+  src: url('fonts/gerbil.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root{
+    --primary-color: white;
+    --secondary-color: rgb(215, 238, 221);
+    --secondary-color-rgb: 215, 238, 221;
+    --tertiary-color: black;
+    --text-color-light: #707070;
+    --white: #fff;
+    --black: #000;
+    --white-rgb: 255, 255, 255;
+    --black-rgb: 0, 0, 0;
+    --heading-font-size: 30px;
+    --text-size: 20px;
+    --pri-font: 'Gerbil';
+    --sec-font: 'Satoshi';
+    --gw: 15px;
+    --gh: 15px;
+}
+/* setting primary variables */
+body{
+    font-family: var(--sec-font);
+    background-color: var(--white);
+    color: var(--black);
+    font-size: var(--text-size);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+ul, ol{
+    padding-left: 0;
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--pri-font);
+    font-weight: 200;
+}
+.container{
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    padding-left: var(--gw);
+    padding-right: var(--gw);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--gw));
+    margin-right: calc(-1 * var(--gw));
+}
+.col-1{
+    width: 8.3333%;
+}
+.col-2{
+    width: 16.6666%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.3333%;
+}
+.col-5{
+    width: 41.6666%;
+}
+.col-6{
+    width: 50%;
+}
+.col-7{
+    width: 58.3333%;
+}
+.col-8{
+    width: 66.6666%;
+}
+.col-9{
+    width: 75%;
+}
+.col-10{
+    width: 83.3333%;
+}
+.col-11{
+    width: 91.6666%;
+}
+.col-12{
+    width: 100%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    padding-left: var(--gw);
+    padding-right: var(--gw);
+} 
+.row-gap{
+    row-gap: 20px;
+}
+.items-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.item-end{
+    justify-items: flex-end;
+}
+.self-center{
+    align-self: center;
+}
+.p-150{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
