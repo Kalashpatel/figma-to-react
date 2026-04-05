@@ -13,32 +13,22 @@ export default function Testimonial() {
   return (
     <section className="testi p-150">
 
-      {/* Floating label top-right */}
-      <div className="testi__label">
-        <span className="testi__label-dot" />
-        Subhashri Sahoo
-      </div>
-
-      {/* Dashed vertical line left-center */}
-      <div className="testi__vline" />
-      {/* Dashed horizontal line mid-left */}
-      <div className="testi__hline" />
-
       <div className="container">
-        <div className="row items-center">
+        <div className="row items-center justify-center">
 
           {/* Left floating faces */}
           <div className="col-2 col-md-12 testi__side testi__side--left">
-            <img src={face1} className="testi__face testi__face--tl" alt="" />
-            <img src={face2} className="testi__face testi__face--ml" alt="" />
-            <img src={face3} className="testi__face testi__face--bl" alt="" />
+            <img src={face1} className="testi__face testi__face--tl display-xs-none" alt="" />
+            <img src={face2} className="testi__face testi__face--ml display-xs-none" alt="" />
+            <img src={face3} className="testi__face testi__face--bl display-xs-none" alt="" />
+            <img src={face8} className="testi__face testi__face--bl display-xs-none" alt="" />
           </div>
 
           {/* Center content */}
-          <div className="col-8 col-md-12 testi__center">
+          <div className="col-7 col-xs-12 col-md-12 testi__center">
             <h2 className="title testi__title">
               <span className="testi__highlight">What</span> our customer<br />
-              says <span className="testi__underline">About Us</span>
+              says <span className="hero__underline">About Us</span>
             </h2>
 
             <div className="testi__card">
@@ -55,11 +45,11 @@ export default function Testimonial() {
           </div>
 
           {/* Right floating faces */}
-          <div className="col-2 col-md-12 testi__side testi__side--right">
-            <img src={face4} className="testi__face testi__face--tr" alt="" />
-            <img src={face5} className="testi__face testi__face--mr1" alt="" />
-            <img src={face6} className="testi__face testi__face--mr2" alt="" />
-            <img src={face7} className="testi__face testi__face--br" alt="" />
+          <div className="col-2  col-md-12 testi__side testi__side--right">
+            <img src={face4} className="testi__face testi__face--tr display-xs-none" alt="" />
+            <img src={face5} className="testi__face testi__face--mr1 display-xs-none" alt="" />
+            <img src={face6} className="testi__face testi__face--mr2 display-xs-none" alt="" />
+            <img src={face7} className="testi__face testi__face--br display-xs-none" alt="" />
           </div>
 
         </div>

@@ -1,4 +1,4 @@
-import vector3 from '../assets/elements/Vector3.png'
+import vector3 from '../assets/elements/Vector7.png'
 
 const services = [
   {
@@ -25,7 +25,7 @@ export default function Services() {
         <div className="services__head">
           <h2 className="title services__title">
             What we <span className="services__highlight">can</span><br />
-            offer <span className="services__underline">you!</span>
+            <span className="hero__underline">offer you!</span>
           </h2>
         </div>
 

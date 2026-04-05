@@ -31,9 +31,9 @@ export default function Footer() {
       {/* Links grid */}
       <div className="footer__links-section">
         <div className="container">
-          <div className="row footer__grid">
+          <div className="row footer__grid justify-center">
 
-            <div className="col-3 col-md-6 col-xs-12">
+            <div className="col-3 col-md-6 col-xs-7">
               <h4 className="footer__col-title">Company</h4>
               <ul>
                 <li><a href="#">Home</a></li>
@@ -43,7 +43,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-3 col-md-6 col-xs-12">
+            <div className="col-3 col-md-6 col-xs-7">
               <h4 className="footer__col-title">Terms &amp; Policies</h4>
               <ul>
                 <li><a href="#">Privacy Policy</a></li>
@@ -53,7 +53,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-3 col-md-6 col-xs-12">
+            <div className="col-3 col-md-6 col-xs-7">
               <h4 className="footer__col-title">Follow Us</h4>
               <ul>
                 <li><a href="#">Instagram</a></li>
@@ -63,7 +63,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-3 col-md-6 col-xs-12">
+            <div className="col-3 col-md-6 col-xs-7">
               <h4 className="footer__col-title">Terms &amp; Policies</h4>
               <p className="footer__address">1498w Fluton ste, STE<br />2D Chicgo, IL 63867.</p>
               <p className="footer__contact">(123) 456789000</p>

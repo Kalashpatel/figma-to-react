@@ -167,14 +167,14 @@
   object-fit: cover;
   z-index: -1;
 }
-.hero__highlight, .about__highlight {
+.hero__highlight, .about__highlight, .services__highlight, .testi__highlight {
   padding: 0rem 1.5rem; 
   border-radius: 7rem;
 }
 .hero__highlight--pink {
   background: rgba(244, 114, 182, 0.5);
 }
-.hero__highlight--green, .about__highlight {
+.hero__highlight--green, .about__highlight, .services__highlight, .testi__highlight {
   background: rgba(134, 239, 172, 0.5);
 }
 
@@ -363,9 +363,9 @@
 
 .services__curve {
   position: absolute;
-  top: -40px;
-  right: -60px;
-  width: 340px;
+  top: -15%;
+  right: 0%;
+  width: 600px;
   pointer-events: none;
   transform: rotate(-10deg);
   opacity: 0.8;
@@ -378,27 +378,6 @@
 .services__title {
   font-size: clamp(40px, 6vw, 80px);
   line-height: 1.15;
-}
-
-.services__highlight {
-  background: rgba(134, 239, 172, 0.5);
-  border-radius: 6px;
-  padding: 0 8px;
-}
-
-.services__underline {
-  position: relative;
-  display: inline-block;
-}
-.services__underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 4px;
-  width: 100%;
-  height: 4px;
-  background: #f59e0b;
-  border-radius: 2px;
 }
 
 .services__list {
@@ -448,26 +427,6 @@
   overflow: hidden;
   text-align: center;
 }
-
-.testi__vline {
-  position: absolute;
-  left: 31%;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  border-left: 1.5px dashed rgba(var(--black-rgb), 0.15);
-  pointer-events: none;
-}
-.testi__hline {
-  position: absolute;
-  left: 0;
-  top: 52%;
-  width: 31%;
-  height: 1px;
-  border-top: 1.5px dashed rgba(var(--black-rgb), 0.15);
-  pointer-events: none;
-}
-
 .testi__label {
   position: absolute;
   top: 60px;
@@ -501,7 +460,6 @@
 .testi__face {
   border-radius: 50%;
   object-fit: cover;
-  display: block;
 }
 .testi__face--tl {
   width: 80px;
@@ -540,30 +498,9 @@
 }
 
 .testi__title {
-  font-size: clamp(28px, 4vw, 52px);
+  font-size: 55px;
   line-height: 1.3;
   margin-bottom: 36px;
-}
-
-.testi__highlight {
-  background: rgba(134, 239, 172, 0.5);
-  border-radius: 6px;
-  padding: 0 8px;
-}
-
-.testi__underline {
-  position: relative;
-  display: inline-block;
-}
-.testi__underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 2px;
-  width: 100%;
-  height: 4px;
-  background: #f59e0b;
-  border-radius: 2px;
 }
 
 .testi__card {
@@ -579,11 +516,11 @@
   opacity: 0.7;
 }
 .testi__quote--open {
-  top: -14px;
+  top: 14px;
   left: 20px;
 }
 .testi__quote--close {
-  bottom: -14px;
+  bottom: 14px;
   right: 20px;
 }
 
@@ -690,6 +627,7 @@
 
 .footer__links-section {
   padding: 60px 0 40px;
+  text-align: center;
 }
 
 .footer__grid {
