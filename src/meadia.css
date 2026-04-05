@@ -505,7 +505,13 @@
   .col-xs-12 {
     width: 100%;
   }
-
+  .display-xs-none, .hero__underline::after{
+    display: none;
+  }
+  .p-150{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   /* Hero */
   .hero__title {
     font-size: clamp(28px, 9vw, 40px);
@@ -535,7 +541,7 @@
 
   /* About */
   .about__img {
-    width: 220px;
+    width: 100% !important;
     height: 220px;
   }
   .about__title {

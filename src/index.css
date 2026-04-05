@@ -128,9 +128,12 @@ h1, h2, h3, h4, h5, h6{
     justify-items: flex-end;
 }
 .self-center{
-    align-self: center;
+    justify-self: center;
 }
 .p-150{
     padding-top: 150px;
     padding-bottom: 150px;
+}
+.row-gap{
+    row-gap: 20px;
 }

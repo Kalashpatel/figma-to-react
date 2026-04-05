@@ -3,20 +3,22 @@ import img2 from '../assets/images/about/img2.png'
 import polygon from '../assets/elements/Polygon.png'
 import square from '../assets/elements/square.png'
 import vector3 from '../assets/elements/Vector3.png'
+import Ellipse from '../assets/elements/Ellipse.png'
 
 export default function About() {
   return (
     <section className="about p-150">
       {/* Curved line connecting both blocks */}
-      <img src={vector3} className="about__curve" alt="" aria-hidden="true" />
+      <img src={vector3} className="about__curve display-xs-none" alt="" aria-hidden="true" />
+      <img src={Ellipse} className='about-ellipse display-xs-none' alt='ellipse'/>
 
       <div className="container">
 
         {/* Block 1 — text left, image right */}
-        <div className="row items-center about__block">
-          <div className="col-6 col-md-12">
+        <div className="row row-gap items-center about__block">
+          <div className="col-7 col-xs-12  col-md-12">
             <h2 className="title about__title">
-              Tomorrow should be better than{' '}
+              <span className='hero__underline'>Tomorrow</span> should be better than{' '}
               <span className="about__highlight">today</span>
             </h2>
             <p className="about__text">
@@ -29,9 +31,9 @@ export default function About() {
             </a>
           </div>
 
-          <div className="col-6 col-md-12">
-            <div className="about__img-wrap about__img-wrap--right">
-              <img src={square} className="about__deco about__deco--square-tr" alt="" aria-hidden="true" />
+          <div className="col-5 col-xs-12 col-md-12 self-center">
+            <div className="about__img-wrap">
+              <img src={square} className="about__deco about__deco--square-tr display-xs-none" alt="" aria-hidden="true" />
               <img src={img1} className="about__img" alt="Meeting room" />
             </div>
           </div>
@@ -39,17 +41,18 @@ export default function About() {
 
         {/* Block 2 — image left, text right */}
         <div className="row items-center about__block">
-          <div className="col-6 col-md-12 about__img-col">
+          <div className="col-6 col-xs-12 col-md-12 about__img-col">
             <div className="about__img-wrap about__img-wrap--left">
-              <img src={polygon} className="about__deco about__deco--tri-bl" alt="" aria-hidden="true" />
+              <img src={polygon} className="about__deco about__deco--tri-bl " alt="" aria-hidden="true" />
+              <img src={polygon} className="about__deco about__deco--tri-fl" alt="" aria-hidden="true" />
               <img src={img2} className="about__img" alt="Working together" />
             </div>
           </div>
 
-          <div className="col-6 col-md-12">
+          <div className="col-6 col-xs-12 col-md-12">
             <h2 className="title about__title">
               <span className="about__highlight">See</span> how we can
-              help you <span className="about__underline">progress</span>
+              help you <span className="hero__underline">progress</span>
             </h2>
             <p className="about__text">
               We add a layer of fearless insights and action that allows change
