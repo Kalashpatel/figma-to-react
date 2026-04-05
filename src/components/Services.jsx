@@ -1,4 +1,5 @@
 import vector3 from '../assets/elements/Vector7.png'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 const services = [
   {
@@ -16,21 +17,22 @@ const services = [
 ]
 
 export default function Services() {
+  const headRef = useScrollReveal()
+  const listRef = useScrollReveal()
+
   return (
     <section className="services p-150">
       <img src={vector3} className="services__curve" alt="" aria-hidden="true" />
 
       <div className="container">
-        {/* Heading */}
-        <div className="services__head">
+        <div ref={headRef} className="services__head reveal">
           <h2 className="title services__title">
             What we <span className="services__highlight">can</span><br />
             <span className="hero__underline">offer you!</span>
           </h2>
         </div>
 
-        {/* Service rows */}
-        <div className="services__list">
+        <div ref={listRef} className="services__list reveal reveal-d2">
           {services.map((s, i) => (
             <div className="services__item row items-center" key={i}>
               <div className="col-3 col-md-12">

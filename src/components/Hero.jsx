@@ -9,32 +9,32 @@ import face8 from '../assets/images/hero-section/face8.png'
 import vector4 from '../assets/elements/Vector4.png'
 import vector5 from '../assets/elements/Vector5.png'
 import Ellipse2 from '../assets/elements/Ellipse2.png'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 export default function Hero() {
+  const titleRef  = useScrollReveal()
+  const subRef    = useScrollReveal()
+  const facesRef  = useScrollReveal()
+
   return (
     <section className="hero p-150">
-      {/* Decorative elements */}
       <img src={vector4} className="hero__deco hero__deco--v1" alt="" aria-hidden="true" />
       <img src={vector5} className="hero__deco hero__deco--v2" alt="" aria-hidden="true" />
       <img src={Ellipse2} className="hero__deco hero__deco--polygon" alt="" aria-hidden="true" />
 
       <div className="container">
-
-        {/* Heading */}
-        <h1 className="title hero__title">
+        <h1 ref={titleRef} className="title hero__title reveal">
           The <span className="hero__underline">thinkers</span> and doers were{' '}
           <span className="hero__highlight hero__highlight--pink">changing</span> the{' '}
           <span className="hero__highlight hero__highlight--green">status</span> Quo with
         </h1>
 
-        {/* Subtitle */}
-        <p className="hero__subtitle">
+        <p ref={subRef} className="hero__subtitle reveal reveal-d2">
           We are a team of strategists, designers communicators, makers. Togeather,<br />
           we belive that progress only hghappens when you refuse to play things safe.
         </p>
 
-        {/* Faces */}
-        <div className="hero__faces">
+        <div ref={facesRef} className="hero__faces reveal reveal-d3">
           <img src={face1} className="hero__face hero__face--1" alt="team member" />
           <img src={face2} className="hero__face hero__face--2" alt="team member" />
           <img src={face3} className="hero__face hero__face--3" alt="team member" />

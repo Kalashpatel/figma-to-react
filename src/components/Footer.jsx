@@ -1,8 +1,12 @@
-import ellipse from '../assets/elements/Ellipse.png'
-import vector6 from '../assets/elements/Vector6.png'
-import square from '../assets/elements/square.png'
+import ellipse from '../assets/elements/Ellipse2.png'
+import vector6 from '../assets/elements/Vector1.png'
+import square from '../assets/elements/Vector2.png'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 export default function Footer() {
+  const nlRef    = useScrollReveal()
+  const linksRef = useScrollReveal()
+
   return (
     <footer className="footer">
 
@@ -13,7 +17,7 @@ export default function Footer() {
         <img src={ellipse} className="footer__deco footer__deco--ellipse" alt="" aria-hidden="true" />
 
         <div className="container">
-          <div className="footer__nl-inner">
+          <div ref={nlRef} className="footer__nl-inner reveal">
             <h2 className="title footer__nl-title">
               Subscribe to<br />our newsletter
             </h2>
@@ -31,9 +35,9 @@ export default function Footer() {
       {/* Links grid */}
       <div className="footer__links-section">
         <div className="container">
-          <div className="row footer__grid justify-center">
+          <div ref={linksRef} className="row footer__grid justify-center reveal">
 
-            <div className="col-3 col-md-6 col-xs-7">
+            <div className="col-3 col-md-6 col-xs-7 reveal-d1">
               <h4 className="footer__col-title">Company</h4>
               <ul>
                 <li><a href="#">Home</a></li>
@@ -43,7 +47,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-3 col-md-6 col-xs-7">
+            <div className="col-3 col-md-6 col-xs-7 reveal-d2">
               <h4 className="footer__col-title">Terms &amp; Policies</h4>
               <ul>
                 <li><a href="#">Privacy Policy</a></li>
@@ -53,7 +57,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-3 col-md-6 col-xs-7">
+            <div className="col-3 col-md-6 col-xs-7 reveal-d3">
               <h4 className="footer__col-title">Follow Us</h4>
               <ul>
                 <li><a href="#">Instagram</a></li>
@@ -63,7 +67,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-3 col-md-6 col-xs-7">
+            <div className="col-3 col-md-6 col-xs-7 reveal-d4">
               <h4 className="footer__col-title">Terms &amp; Policies</h4>
               <p className="footer__address">1498w Fluton ste, STE<br />2D Chicgo, IL 63867.</p>
               <p className="footer__contact">(123) 456789000</p>

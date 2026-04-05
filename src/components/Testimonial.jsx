@@ -8,30 +8,33 @@ import face7 from '../assets/images/testimonial/face7.png'
 import face8 from '../assets/images/testimonial/face8.png'
 import quotesOpen from '../assets/images/testimonial/quotes-1.png'
 import quotesClose from '../assets/images/testimonial/quotes-2.png'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 export default function Testimonial() {
+  const titleRef = useScrollReveal()
+  const cardRef  = useScrollReveal()
+  const leftRef  = useScrollReveal()
+  const rightRef = useScrollReveal()
+
   return (
     <section className="testi p-150">
-
       <div className="container">
         <div className="row items-center justify-center">
 
-          {/* Left floating faces */}
-          <div className="col-2 col-md-12 testi__side testi__side--left">
+          <div ref={leftRef} className="col-2 col-md-12 testi__side testi__side--left reveal reveal-left">
             <img src={face1} className="testi__face testi__face--tl display-xs-none" alt="" />
             <img src={face2} className="testi__face testi__face--ml display-xs-none" alt="" />
             <img src={face3} className="testi__face testi__face--bl display-xs-none" alt="" />
             <img src={face8} className="testi__face testi__face--bl display-xs-none" alt="" />
           </div>
 
-          {/* Center content */}
           <div className="col-7 col-xs-12 col-md-12 testi__center">
-            <h2 className="title testi__title">
+            <h2 ref={titleRef} className="title testi__title reveal">
               <span className="testi__highlight">What</span> our customer<br />
               says <span className="hero__underline">About Us</span>
             </h2>
 
-            <div className="testi__card">
+            <div ref={cardRef} className="testi__card reveal reveal-d2">
               <img src={quotesOpen}  className="testi__quote testi__quote--open"  alt="open quote" />
               <p className="testi__text">
                 Elementum delivered the site with inthe timeline they requested.
@@ -44,8 +47,7 @@ export default function Testimonial() {
             </div>
           </div>
 
-          {/* Right floating faces */}
-          <div className="col-2  col-md-12 testi__side testi__side--right">
+          <div ref={rightRef} className="col-2 col-md-12 testi__side testi__side--right reveal reveal-right">
             <img src={face4} className="testi__face testi__face--tr display-xs-none" alt="" />
             <img src={face5} className="testi__face testi__face--mr1 display-xs-none" alt="" />
             <img src={face6} className="testi__face testi__face--mr2 display-xs-none" alt="" />
@@ -54,7 +56,6 @@ export default function Testimonial() {
 
         </div>
 
-        {/* Pagination dots */}
         <div className="testi__dots">
           <span className="testi__dot testi__dot--active" />
           <span className="testi__dot" />
